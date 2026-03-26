@@ -54,7 +54,6 @@ const reveal = (visible, delay = 0) => ({
 
 export default function About() {
   const { ref: headerRef, visible: headerVisible } = useScrollReveal();
-  const { ref: ctaRef, visible: ctaVisible } = useScrollReveal();
   const { ref: bioRef, visible: bioVisible } = useScrollReveal();
   const { ref: infoRef, visibleItems: infoVisible } = useScrollRevealList(
     quickInfo.length,

@@ -29,19 +29,24 @@ export default function Hero() {
   useEffect(() => {
     const cur = roles[ridx];
     let t;
-    if (!deleting && displayed.length < cur.length)
-      t = setTimeout(
-        () => setDisplayed(cur.slice(0, displayed.length + 1)),
-        72,
-      );
-    else if (!deleting && displayed.length === cur.length)
+
+    if (!deleting && displayed.length < cur.length) {
+      t = setTimeout(() => {
+        setDisplayed(cur.slice(0, displayed.length + 1));
+      }, 72);
+    } else if (!deleting && displayed.length === cur.length) {
       t = setTimeout(() => setDeleting(true), 2200);
-    else if (deleting && displayed.length > 0)
-      t = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 36);
-    else {
-      setDeleting(false);
-      setRidx((ridx + 1) % roles.length);
+    } else if (deleting && displayed.length > 0) {
+      t = setTimeout(() => {
+        setDisplayed(displayed.slice(0, -1));
+      }, 36);
+    } else {
+      t = setTimeout(() => {
+        setDeleting(false);
+        setRidx((prev) => (prev + 1) % roles.length);
+      }, 200);
     }
+
     return () => clearTimeout(t);
   }, [displayed, deleting, ridx]);
 
