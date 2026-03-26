@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 /**
  * useScrollReveal — triggers 'visible' state when element enters viewport.
@@ -20,7 +20,7 @@ export function useScrollReveal(options = {}) {
           observer.unobserve(el); // Only animate once
         }
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px', ...options }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px", ...options },
     );
 
     observer.observe(el);
@@ -49,7 +49,7 @@ export function useScrollRevealList(count, staggerMs = 120) {
           // Stagger reveal each item
           for (let i = 0; i < count; i++) {
             setTimeout(() => {
-              setVisibleItems(prev => {
+              setVisibleItems((prev) => {
                 const next = [...prev];
                 next[i] = true;
                 return next;
@@ -59,7 +59,7 @@ export function useScrollRevealList(count, staggerMs = 120) {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+      { threshold: 0.08, rootMargin: "0px 0px -30px 0px" },
     );
 
     observer.observe(el);

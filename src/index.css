@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap");
 
 /* ─── CSS Variables ─── */
 :root {
@@ -58,12 +58,14 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   background: var(--bg);
   color: var(--t2);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 #root {
@@ -96,7 +98,7 @@ body {
 
 /* ─── Font utilities ─── */
 .font-outfit {
-  font-family: 'Outfit', 'Inter', sans-serif !important;
+  font-family: "Outfit", "Inter", sans-serif !important;
 }
 
 /* ─── Text utilities ─── */
@@ -146,7 +148,11 @@ body {
   border-radius: 16px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .glass-card:hover {
@@ -222,12 +228,14 @@ body {
   border: none;
   background: linear-gradient(135deg, #7c3aed, #5b21b6);
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.93rem;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   white-space: nowrap;
 }
 
@@ -245,7 +253,7 @@ body {
   border: 1.5px solid rgba(124, 58, 237, 0.5);
   background: transparent;
   color: #7c3aed;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.93rem;
   font-weight: 600;
   cursor: pointer;
@@ -276,7 +284,7 @@ html.light .btn-outline {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -362,96 +370,93 @@ html.light .btn-outline {
 
 /* ─── Animations ─── */
 @keyframes pulse-glow {
-
   0%,
   100% {
-    opacity: .35;
-    transform: scale(1)
+    opacity: 0.35;
+    transform: scale(1);
   }
 
   50% {
-    opacity: .65;
-    transform: scale(1.06)
+    opacity: 0.65;
+    transform: scale(1.06);
   }
 }
 
 @keyframes float {
-
   0%,
   100% {
-    transform: translateY(0)
+    transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-10px)
+    transform: translateY(-10px);
   }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px)
+    transform: translateY(20px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateX(-20px)
+    transform: translateX(-20px);
   }
 
   to {
     opacity: 1;
-    transform: translateX(0)
+    transform: translateX(0);
   }
 }
 
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(20px)
+    transform: translateX(20px);
   }
 
   to {
     opacity: 1;
-    transform: translateX(0)
+    transform: translateX(0);
   }
 }
 
 @keyframes shimmer {
   0% {
-    background-position: -200% center
+    background-position: -200% center;
   }
 
   100% {
-    background-position: 200% center
+    background-position: 200% center;
   }
 }
 
 @keyframes spin-slow {
   from {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 
 @keyframes blink {
-
   0%,
   100% {
-    opacity: 1
+    opacity: 1;
   }
 
   50% {
-    opacity: 0
+    opacity: 0;
   }
 }
 
@@ -480,27 +485,27 @@ html.light .btn-outline {
 }
 
 .delay-100 {
-  animation-delay: .1s
+  animation-delay: 0.1s;
 }
 
 .delay-200 {
-  animation-delay: .2s
+  animation-delay: 0.2s;
 }
 
 .delay-300 {
-  animation-delay: .3s
+  animation-delay: 0.3s;
 }
 
 .delay-400 {
-  animation-delay: .4s
+  animation-delay: 0.4s;
 }
 
 .delay-800 {
-  animation-delay: .8s
+  animation-delay: 0.8s;
 }
 
 .delay-1000 {
-  animation-delay: 1s
+  animation-delay: 1s;
 }
 
 /* ─── Skill badge (tag cloud) ─── */
@@ -525,7 +530,7 @@ html.light .btn-outline {
 
 input,
 textarea {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--t1);
   background: transparent;
 }
@@ -549,17 +554,50 @@ section {
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
-  .section-label { font-size: 0.66rem; letter-spacing: 2px; }
-  .skill-chip { min-width: 78px; width: 78px; padding: 12px 10px; gap: 7px; }
-  .skill-chip span { font-size: 0.7rem; }
-  .skill-chip img { width: 30px; height: 30px; }
-  .skill-chip .chip-emoji { font-size: 1.3rem; }
-  .btn-primary, .btn-outline { padding: 11px 20px; font-size: 0.88rem; }
-  .glass-card { border-radius: 12px; }
-  .timeline-line { left: 16px !important; }
-  .cat-label { font-size: 0.68rem; padding: 5px 12px; }
+  .section-label {
+    font-size: 0.66rem;
+    letter-spacing: 2px;
+  }
+  .skill-chip {
+    min-width: 78px;
+    width: 78px;
+    padding: 12px 10px;
+    gap: 7px;
+  }
+  .skill-chip span {
+    font-size: 0.7rem;
+  }
+  .skill-chip img {
+    width: 30px;
+    height: 30px;
+  }
+  .skill-chip .chip-emoji {
+    font-size: 1.3rem;
+  }
+  .btn-primary,
+  .btn-outline {
+    padding: 11px 20px;
+    font-size: 0.88rem;
+  }
+  .glass-card {
+    border-radius: 12px;
+  }
+  .timeline-line {
+    left: 16px !important;
+  }
+  .cat-label {
+    font-size: 0.68rem;
+    padding: 5px 12px;
+  }
 }
 @media (max-width: 480px) {
-  .btn-primary, .btn-outline { padding: 10px 16px; font-size: 0.85rem; }
-  .skill-chip { min-width: 72px; width: 72px; }
+  .btn-primary,
+  .btn-outline {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+  .skill-chip {
+    min-width: 72px;
+    width: 72px;
+  }
 }
