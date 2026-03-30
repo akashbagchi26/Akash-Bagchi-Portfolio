@@ -24,7 +24,7 @@ const contactItems = [
     icon: "🐙",
     label: "GitHub",
     value: "github.com/akash-bagchi",
-    href: "https://github.com/akash-bagchi",
+    href: "https://github.com/akashbagchi26",
     accent: "#c4b5fd",
     accentBg: "rgba(124,58,237,.1)",
     accentBorder: "rgba(124,58,237,.25)",

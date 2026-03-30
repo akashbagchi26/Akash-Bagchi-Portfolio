@@ -1,7 +1,7 @@
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const socialLinks = [
-  { icon: "🐙", label: "GitHub", href: "https://github.com/akash-bagchi" },
+  { icon: "🐙", label: "GitHub", href: "https://github.com/akashbagchi26" },
   {
     icon: "💼",
     label: "LinkedIn",
